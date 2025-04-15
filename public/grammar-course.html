@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Grammar Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/learn russian logo.jpg" alt="Logo">
+        <div class="Navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="course.html">Курсы</a></li>
+                <li><a href="dashboard.html">Панель управления</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Grammar Course Section -->
+    <section id="grammar-course" class="course-section">
+        <div class="container">
+            <h1>Изучите русскую грамматику(ရုရှားသဒ္ဒါကိုလေ့လာပါ။)</h1>
+            <p>Выберите урок, чтобы начать практиковаться:(Выберите урок, чтобы начать практиковаться:)</p>
+
+            <!-- Lesson Buttons -->
+            <div id="lesson-buttons">
+                <button class="lesson-btn" data-lesson="subject-verb">Согласование подлежащего и глагола</button>
+                <button class="lesson-btn" data-lesson="gender-nouns">Род существительных</button>
+                <button class="lesson-btn" data-lesson="negatives">Отрицательные предложения</button>
+                <button class="lesson-btn" data-lesson="adjectives-nouns">Согласование прилагательного и существительного</button>
+              
+           
+            </div>
+
+            <!-- Content Area -->
+            <div id="content-area"></div>
+
+            <!-- Gamification -->
+            <div id="gamification">
+                <h2>Points: <span id="points">0</span></h2>
+                <h3>Badges Earned:</h3>
+                <div id="badges"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   
+</body>
+
+</html>
+<script src="interactive-grammar.js"></script>

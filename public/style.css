@@ -1,0 +1,1424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+/* Global Tags */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+/* Navigation */
+nav{
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 8vw;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+nav img{
+  width: 150px;
+  cursor: pointer;
+}
+nav .Navigation ul{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+nav .Navigation ul li{
+  list-style: none;
+  margin-left: 30px;
+}
+nav .Navigation ul li a{
+  text-decoration: none;
+  color: rgb(21, 21, 100);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+nav .Navigation ul li a.active,
+nav .Navigation ul li a:hover{
+  color: #fdc93b;
+}
+
+/* Home */
+#Home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3),rgba(5, 4, 46, 0.7)),
+  url("images/itmologo.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+}
+#Home h2{
+color: #fff;
+font-size: 2.2rem;
+letter-spacing: 1px;
+
+}
+#Home p{
+  width: 50%;
+  color: #ffffff;
+  font-size: 0/9rem;
+  line-height: 25px;
+  
+  }
+  #Home .btn{
+    margin-top: 30px;
+  }
+  #Home a{
+text-decoration: none;
+font-size: 0.9rem;
+padding: 13px 35px;
+background-color: #fff;
+font-weight: 600;
+border-radius: 5px;
+  }
+  #Home a.blue {
+    color: #fff;
+    background: rgb(21, 21 , 100);
+    transition: 0.3s ease;
+
+  } 
+  #Home a.blue:hover {
+    color: rgb(21, 21 , 100);
+    background: #fff;
+  } 
+  #Home a.yellow {
+    color: #fff;
+    background:#fdc93b;
+    transition: 0.3s ease;
+    scroll-behavior: smooth;
+  } 
+  #Home a.yellow:hover {
+    color:rgb(21, 21 , 100);
+    background: #fff;
+  } 
+/* features */
+#features {
+  padding: 5vw 8vw 0 8vw;
+  text-align: center;
+  
+}
+#features .fea-base {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+
+}
+#features .fea-box {
+  background: #fff0ff;
+  text-align: start;
+  
+  
+}
+#features .fea-box i {
+  font-size: 2.3rem;
+  color: rgb(44, 44, 80);
+}
+#features .fea-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color:rgb(46, 46, 59) ;
+  padding: 13px 0 7px 0 ;
+}
+#features .fea-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color:rgb(70, 70, 87) ;
+ 
+}
+/* course */
+#course {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+#course .Courses-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  
+}
+#course .Courses {
+  text-align: start;
+  background: #f9f9ff;
+  height: 100%;
+  position: relative;
+}
+#course .Courses img{
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+#course .Courses .details {
+  padding: 15px 15px 0 15px ;
+}
+#course .Courses .details i {
+  color: #fdc93b;
+  font-size: .9rem;
+}
+/* registration */
+ 
+#registration {
+padding: 6vw 8vw 6vw 8vw;
+background-image:linear-gradient(rgba(99, 112, 168, 0.5), rgba(81,91,233,0.5)),url("images/signup.jpg");
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#registration .reminder{
+  color: #fff;
+}
+#registration .reminder h1{
+color: #fff;
+}
+#registration .form{
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+}
+#registration .form input{
+  margin: 15px 0;
+  padding: 15px 10px;
+  border: 1px solid rgb(84,40,241);
+  outline: none;
+}
+#registration .form input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+#registration .form .btn {
+  margin-top: 20px;
+}
+#registration .form a.yellow {
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  background-color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  background:#fdc93b;
+  transition: 0.3s ease;
+}
+#registration .form a.yellow:hover {
+  color:rgb(21, 21 , 100);
+  background: #fff;
+} 
+
+/* About Section */
+.about-section {
+  padding: 5vw 8vw;
+  background-color: #f9f9ff;
+  margin-top: 80px; /* Add margin to create space below the navigation bar */
+}
+/* Fix navigation overlap */
+#about {
+  padding-top: 100px; /* Adjust this value to match the height of your navigation bar */
+  padding-bottom: 50px; /* Optional: Add bottom padding for better spacing */
+}
+
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #232355;
+}
+
+.about-header p {
+  font-size: 1rem;
+  color: #757575;
+  margin-top: 10px;
+}
+
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #2d2d63;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  font-size: 1rem;
+  color: #2d2d63;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.about-text ul li i {
+  color: #fdc93b;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 5vw 8vw;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.mission-section h1 {
+  font-size: 2.5rem;
+  color: #232355;
+  margin-bottom: 20px;
+}
+
+.mission-section p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Courses Section in home pages */
+.courses-section {
+  padding: 5vw 8vw;
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.courses-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #232355;
+  margin-bottom: 10px;
+}
+
+.courses-section p {
+  font-size: 1rem;
+  color: #757575;
+  margin-bottom: 30px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  color: #232355;
+  padding: 15px;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #757575;
+  padding: 0 15px 15px;
+  line-height: 1.5;
+}
+
+.course-card .btn {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: #fdc93b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.course-card .btn:hover {
+  background-color: #e0b33a;
+}
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9ff;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  color: #232355;
+}
+
+p {
+  line-height: 1.8;
+  color: #555555;
+}
+
+a {
+  color: #fdc93b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e0b33a;
+}
+
+
+
+
+
+
+/* Gamified Course Section */
+* Spacing Adjustment for H1 */
+.courses-section {
+  padding-top: 80px; /* Adjust this value to match the height of your navigation bar */
+  padding-bottom: 50px; /* Optional: Add bottom padding for better spacing */
+  background-color: #f9f9ff; /* Background color for section */
+  text-align: center;
+  
+}.container h1 {
+  padding-top: 100px; /* Adjust this value to match the height of your navigation bar */
+  padding-bottom: 50px; /* Optional: Add bottom padding for better spacing */
+}
+
+
+ /* Table Styles for alphabet*/
+ .alphabet-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.alphabet-table thead tr {
+  background-color: #6a11cb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.alphabet-table th, .alphabet-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.alphabet-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.alphabet-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.alphabet-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.section-header {
+  background-color: #2575fc;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.audio-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #2575fc;
+  cursor: pointer;
+}
+
+.audio-button:hover {
+  color: #6a11cb;
+}
+
+
+
+
+
+
+/* Exercise Section */
+.exercise {
+  background-color: #8080e7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.exercise h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #232355;
+}
+
+.exercise .question {
+  margin-bottom: 20px;
+}
+
+.exercise ul {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise ul li {
+  margin-bottom: 10px;
+}
+
+.exercise ul li button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fdc93b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.exercise ul li button:hover {
+  background-color: #e0b33a;
+}
+
+/* Footer */
+footer {
+  background-color: #232355;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .social-links {
+  margin-top: 15px;
+}
+
+footer .social-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .social-links li a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social-links li a:hover {
+  color: #fdc93b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav img {
+      height: 40px;
+  }
+
+  .course-section {
+      padding: 100px 5vw 50px;
+  }
+
+  .lesson h2, .exercise h2 {
+      font-size: 1.5rem;
+  }
+
+  .table th, .table td {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav img {
+      height: 35px;
+  }
+
+  .course-section {
+      padding: 100px 3vw 50px;
+  }
+
+  .lesson h2, .exercise h2 {
+      font-size: 1.3rem;
+  }
+
+  .table th, .table td {
+      font-size: 0.8rem;
+  }
+
+  footer p {
+      font-size: 12px;
+  }
+}
+
+
+
+/* Login Form Section */
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px;
+}
+
+#login h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#login-form {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#login-form input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+#login-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#login-form button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+#login-form button:active {
+  transform: scale(0.98);
+}
+
+#login-form a {
+  margin-top: 15px;
+  text-decoration: none;
+  color: #2575fc;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+#login-form a:hover {
+  color: #6a11cb;
+}
+
+/* Error Message Styling */
+#error-message {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  padding: 10px;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  display: none; /* Hidden by default */
+}
+
+#error-message.active {
+  display: block; /* Show when error occurs */
+}
+
+
+
+/* Audio Recognition Game */
+.instructions-section-audio  {
+  background-color: #44d6db;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.instructions-section h2 {
+  font-size: 1.5rem;
+  color: #232355;
+}
+
+.instructions-section p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+#audio-recognition-game {
+  margin-top: 20px; /* Adds space above the game */
+  padding: 100px;
+  text-align: center;
+  background-color: #44d6db;
+}
+#score-display-audio {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+#badge-display-audio {
+  font-size: 24px;
+  color: gold;
+  margin-top: 5px;
+}
+
+
+/* General Button Styling */
+button {
+  padding: 10px 20px;
+  background-color: #fdc93b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e0b33a;
+}
+
+/* Restart Button Specific Styling */
+#restart-audio-btn {
+  margin-top: 15px;
+}
+
+#restart-audio-btn:hover {
+  background-color: #e0b33a;
+}
+
+/* Letter Options List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+ul li button {
+  padding: 10px 20px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+ul li button:hover {
+  background-color: #6a11cb;
+}
+
+/* Feedback Styling */
+#audio-feedback {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 50%;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: #fdc93b;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 5px;
+  width: 0;
+}
+
+
+
+/*memory game*/
+/* Style for the instructions section */
+.instructions-section-memory  {
+  background-color: #8080e7;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.instructions-section h2 {
+  font-size: 1.5rem;
+  color: #232355;
+}
+
+.instructions-section p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  
+}
+
+/* Memory game board with 1 row containing 5 cards */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust width to fit 5 cards */
+  grid-template-rows: auto; /* Ensure only 1 row for each board */
+}
+
+/* Ensure both rows (letter and pronunciation) are displayed separately */
+#game-board, #pronunciation-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards in each row */
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-color: #1f5ed4;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transform: rotateY(0deg);
+  transition: transform 0.5s, background-color 0.3s;
+}
+
+.card.matched {
+  background-color: #6a11cb;
+  cursor: default;
+}
+
+/* Style for letter cards when hidden */
+.letter-card.hidden {
+  background-color: #fdc93b; /* Yellow for letter cards */
+  color: transparent;
+  cursor: pointer;
+}
+
+/* Style for pronunciation cards when hidden */
+.pronunciation-card.hidden {
+  background-color: #2cbe64; /* Purple for pronunciation cards */
+  color: transparent;
+  cursor: pointer;
+}
+
+/* Style for letter cards */
+.letter-card {
+  background-color: #1f5ed4; /* Blue for letter cards */
+  color: white;
+}
+
+/* Style for pronunciation cards */
+.pronunciation-card {
+  background-color: #fdc93b; /* Yellow for pronunciation cards */
+  color: black;
+}
+
+
+/* Style for the badges */
+/* Style for the badge display container */
+#badge-display-memory {
+  font-size: 24px;
+  color: gold;
+  margin-top: 20px;  /* Add margin to ensure it's separated from the rest of the content */
+  text-align: center;  /* Center the badges */
+  display: block;
+  width: 100%;
+}
+
+/* Style for individual badge items */
+.badge {
+  display: inline-block;  /* Make each badge appear side by side */
+  background-color: #1f5ed4;  /* Blue color for badges */
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.badge:hover {
+  background-color: #6a11cb; /* Hover effect */
+}
+
+
+
+
+
+
+
+
+/*styling for vocabulary.css*/
+
+.instructions-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.instructions-section h2 {
+  font-size: 1.5rem;
+  color: #232355;
+}
+
+.instructions-section p, .instructions-section ul {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.instructions-section ul {
+  margin-top: 10px;
+}
+
+.instructions-section ul li {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for game controls (buttons) */
+#game-controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;  /* Center the buttons */
+}
+
+.control-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 50px;  /* Adds space between the buttons */
+  transition: background-color 0.3s ease;
+}
+
+
+.control-btn:hover {
+  background-color: #2b3947;
+}
+
+
+
+
+
+#game-area {
+  margin: 20px 0;
+}
+
+.option-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+ 
+}
+
+.option-btn:hover {
+  background-color: #218838;
+}
+
+/* Flashcard Container */
+.flashcard {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for realism */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Add 3D perspective for card flip effect */
+.flashcard-container {
+  perspective: 1000px;
+}
+
+/* Hover effect to flip the card */
+.flashcard.flip {
+  transform: rotateY(180deg);
+}
+
+/* Style for flashcard front and back */
+.flashcard .front,
+.flashcard .back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Style for the front side (word) */
+.flashcard .front {
+  background-color: #f0f0f0;
+}
+
+/* Style for the back side (translation) */
+.flashcard .back {
+  background-color: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Flip Button Styling */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ffc107;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+
+/*grammar lessons styling*/
+/* General Container Styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Buttons for Lessons */
+.lesson-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lesson-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.lesson-btn:active {
+  transform: scale(0.95);
+}
+
+/* Content Area Styling */
+#content-area {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Gamification Section */
+#gamification {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Badges Styling */
+.badge {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #ffc107;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* Navigation Bar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}
+
+/*5 Adjetive Noun aggrement*/
+/* Drag-and-Drop Container */
+/* General Drag-and-Drop Styling */
+/* General Drag-and-Drop Styling */
+/* General Drag-and-Drop Styling */
+.drag-drop-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between draggable items and drop zones */
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Drop Zone Styling */
+.drop-zone {
+  width: 220px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  border: 2px dashed #007bff;
+  border-radius: 15px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Drop Zone When Hovered */
+.drop-zone.dragover {
+  background-color: #e6f7ff; /* Light blue highlight when hovered */
+  transform: scale(1.05); /* Slightly enlarge */
+  border-color: #80bfff; /* Change border color to a lighter blue */
+}
+
+/* Draggable Items */
+.draggable {
+  width: 200px;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Draggable Item Hover Effect */
+.draggable:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Draggable Item Active Effect */
+.draggable:active {
+  transform: scale(0.95); /* Shrink slightly when dragging */
+  background-color: #003d73; /* Even darker blue */
+}
+
+/* Correct Noun Styling */
+.draggable.completed {
+  background-color: #28a745; /* Green background for correct match */
+  border-color: #28a745; /* Green border */
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.5); /* Green shadow */
+  color: white; /* White text */
+}
+
+/* Incorrect Noun Styling */
+.draggable.incorrect {
+  background-color: #dc3545; /* Red background for incorrect match */
+  border-color: #dc3545; /* Red border */
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.5); /* Red shadow */
+  color: white; /* White text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drag-drop-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .drop-zone, .draggable {
+    width: 90%; /* Expand to fit mobile layout */
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+/* Font and Border Update */
+.drop-zone, .draggable {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+/* 3 Negative Sentences Fill-in-the-Blank Styles */
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 5px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+/* About */
+
+/* Blog */
+
+/* Course_inner */
+
+/* contact */
+
+/* responsive */
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 475px) {
+}

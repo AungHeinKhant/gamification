@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс русского алфавита</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+   
+    <style>
+        .instructions-section {
+    background-color: #8080e7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.instructions-section h2 {
+    font-size: 2.5rem;
+    color: #232355;
+   
+}
+
+.instructions-section p, .instructions-section ul {
+    font-size: 1.5rem;
+    color: #070000;
+    line-height: 1.6;
+    
+}
+
+.instructions-section ul {
+    margin-top: 10px;
+}
+
+.instructions-section ul li {
+    margin-bottom: 10px;
+}
+
+        .score-section {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#badge-display {
+    font-size: 24px;
+    color: gold;
+    margin-top: 5px;
+}
+
+    </style>
+    <script>
+    
+    let score = 0;
+
+//Function to handle answer selection and award points
+function checkAnswer(isCorrect) {
+    const scoreDisplay = document.getElementById("score-display");
+    const badgeDisplay = document.getElementById("badge-display");
+
+    if (isCorrect === true) { // Explicitly checking for true
+        score += 10;
+        alert('✅ Correct! +10 points');
+    } else if (isCorrect === false) { // Explicitly checking for false
+        score -= 5;
+        if (score < 0) score = 0; // Prevent negative scores
+        alert('❌ Incorrect! -5 points');
+    } else {
+        alert('⚠️ Error: Invalid Input! Check button code.');
+        return;
+    }
+
+    // Update Score Display
+    scoreDisplay.innerText = `Ваш результат: ${score} points`;
+
+    // Check and Assign Badges
+    if (score >= 200) {
+        badgeDisplay.innerHTML = "🏆 Platinum Badge Earned!";
+    } else if (score >= 150) {
+        badgeDisplay.innerHTML = "🥇 Gold Badge Earned!";
+    } else if (score >= 100) {
+        badgeDisplay.innerHTML = "🥈 Silver Badge Earned!";
+    } else if (score >= 50) {
+        badgeDisplay.innerHTML = "🥉 Bronze Badge Earned!";
+    } else {
+        badgeDisplay.innerHTML = "";
+    }
+}
+
+
+
+// Function to show final score
+function showFinalScore() {
+    alert(`🎯 Final Score: ${score} points`);
+}
+
+// Function to restart quiz
+function restartQuiz() {
+    score = 0;
+    document.getElementById("score-display").innerText = "Your Score: 0 points";
+    document.getElementById("badge-display").innerHTML = "";
+    alert('🔄 Quiz Restarted!');
+}
+
+    </script>
+    <script>
+        function playAudio(filePath) {
+            const audio = new Audio(filePath);
+            audio.play();
+        }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/learn russian logo.jpg" alt="Logo">
+        <div class="Navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="course.html">Курсы</a></li>
+                <li><a href="dashboard.html">Панель управления</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Alphabet Course Section -->
+    <section id="alphabet-course" class="course-section">
+        <div class="container">
+            <h1>Выучите русский алфавит(ရုရှားအက္ခရာကိုလေ့လာပါ။)</h1>
+            <p>Освойте русский алфавит с помощью пошаговых уроков и прекрасного обзора ниже.</p>
+
+            <!-- Alphabet Table -->
+            <h2>Полный русский алфавит</h2>
+            <table class="alphabet-table">
+                <thead>
+                    <tr>
+                        <th>Буква</th>
+                        <th>Произношение</th>
+                        <th>Аудио</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Alphabetical Order -->
+                    <tr><td>А</td><td>ah</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. А.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Б</td><td>be</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Б.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>В</td><td>ve</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. В.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Г</td><td>ge</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Г.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Д</td><td>de</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Д.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Е</td><td>ye</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Е.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ё</td><td>yo</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ё.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ж</td><td>zhe</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ж.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>З</td><td>ze</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. З.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>И</td><td>ee</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. И.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Й</td><td>Ee kratkoyeh (short i)</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Й.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>К</td><td>ka</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. К.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Л</td><td>el</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Л.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>М</td><td>em</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. М.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Н</td><td>en</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Н.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>О</td><td>O</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. О.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>П</td><td>peh</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. П.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Р</td><td>Er</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Р.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>С</td><td>es</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. С.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Т</td><td>te</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Т.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>У</td><td>oo</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. У.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ф</td><td>ef</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ф.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Х</td><td>kha</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Х.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ц</td><td>tse</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ц.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ч</td><td>che</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ч.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ш</td><td>sha</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ш.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Щ</td><td>shcha</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Щ.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ъ</td><td>Tvyordeey znahk (hard sign)</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. ъ.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ы</td><td>Ih (hard)</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ы.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ь</td><td>Myagkeey znahk (soft sign)</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. ь.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Э</td><td>eh</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Э.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Ю</td><td>yoo</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Ю.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                    <tr><td>Я</td><td>ya</td><td><button class="audio-button" onclick="playAudio('audio/ttsMP3. Я.mp3')"><i class="fas fa-play-circle"></i></button></td></tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
+
+            <!-- Exercises -->
+            <div class="exercise">
+                <h2>Практические упражнения(လက်တွေ့လေ့ကျင့်ခန်း)</h2>
+                <div class="instructions-section">
+                    <h2>Инструкция (အကြောင်းအရာ)</h2>
+                    <p>1. Прочитайте вопрос, который отображается на экране.(မျက်နှာပြင်ပေါ်တွင်ပြသထားသောမေးခွန်းကိုဖတ်ပါ။)</p>
+                    <p>2. Выберите правильный вариант ответа из предложенных.(အကြံပြုထားသူများထံမှ အဖြေမှန်ကို ရွေးချယ်ပါ။)</p>
+                    <p>3. За каждый правильный ответ вы получаете 10 очков.(အဖြေမှန်တိုင်းအတွက် 10 မှတ်ရပါမည် ။)</p>
+                    <p>4. За каждый неправильный ответ вы теряете 5 очков, но ваш счет не может быть меньше нуля.(မှားယွင်းသောအဖြေတစ်ခုစီအတွက် သင်သည် 5 မှတ်ဆုံးရှုံးသော်လည်း သင့်ရမှတ်သည် သုညထက်မနည်းနိုင်ပါ။)</p>
+                    <p>5. Когда ваш балл достигает определенного уровня, вы получаете значки:(သင့်ရမှတ်သည် အဆင့်တစ်ခုသို့ရောက်ရှိသောအခါ၊ သင်သည် တံဆိပ်များရရှိသည်)</p>
+                    <ul>
+                        <li>🏆 За 200 очков: Платиновый значок(အမှတ် ၂၀၀ အတွက်- ပလက်တီနမ်တံဆိပ်)</li>
+                        <li>🥇 За 150 очков: Золотой значок(အမှတ် 150 အတွက်- ရွှေတံဆိပ်)</li>
+                        <li>🥈 За 100 очков: Серебряный значок(အမှတ် 100 အတွက်- ငွေတံဆိပ်)</li>
+                        <li>🥉 За 50 очков: Бронзовый значок(အမှတ် 50 အတွက်- ကြေးတံဆိပ်)</li>
+                    </ul>
+                    <p>6. သင်ပြန်လည်စတင်လိုပါက "Перезапуск" ခလုတ်ကိုနှိပ်ပါ။.</p>
+                </div>
+                
+
+                <!-- Multiple Choice -->
+                <!-- Exercise 1: Pronunciation of А -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+   
+    <p>Как произносится «А»?("А" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(true)">ah</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">uh</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">ay</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 2: Pronunciation of Б -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится "Б"?("Б" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(false)">v</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">p</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">be</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 3: Pronunciation of В -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится "В"?("В" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">b</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">f</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ve</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 4: Pronunciation of Г -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Г"?("Г" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">h</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ge</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">ke</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 5: Pronunciation of Д -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "д"?("д" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">te</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">de</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">ke</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 6: Pronunciation of Е -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Е"?("Е" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+       
+        <li><button class="btn" onclick="checkAnswer(false)">e</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">eh</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ye</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 7: Pronunciation of Ё -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Ё"?("Ё" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(true)">yo</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">ye</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">y</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 8: Pronunciation of Ж -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Ж"?("Ж" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">zeh</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">zhe</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">geh</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 9: Pronunciation of З -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "З"?("З" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">se</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">sh</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ze</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 10: Pronunciation of И -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "И"?("И" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(true)">Ee</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">i</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">y</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 11: Pronunciation of Й -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Й"?("Й" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+      
+        <li><button class="btn" onclick="checkAnswer(false)">y</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">i</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ee kratkoye</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 12: Pronunciation of К -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "К"?("К" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+       
+        <li><button class="btn" onclick="checkAnswer(false)">g</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">ka</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">ch</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 13: Pronunciation of Л -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Л"?("Л" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+       
+        <li><button class="btn" onclick="checkAnswer(false)">r</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">El</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">t</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 14: Pronunciation of М -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "М"?("М" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(true)">em</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">n</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">p</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 15: Pronunciation of Н -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Н"?("Н" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">h</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">m</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">en</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 16: Pronunciation of О -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "О"?("О" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">a</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">e</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">o</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 17: Pronunciation of П -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "П"?("П" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">b</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">pe</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">t</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 18: Pronunciation of Р -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Р"?("Р" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+       
+        <li><button class="btn" onclick="checkAnswer(false)">l</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">t</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">er</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 19: Pronunciation of С -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "С"?("С" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        
+        <li><button class="btn" onclick="checkAnswer(false)">z</button></li>
+        <li><button class="btn" onclick="checkAnswer(true)">es</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">sh</button></li>
+    </ul>
+</div>
+
+<!-- Exercise 20: Pronunciation of Т -->
+<div class="exercise-section">
+    <h3>Множественный выбор</h3>
+    <p>Как произносится  "Т"?("Т" ၏ အသံထွက်ကား အဘယ်နည်း။)</p>
+    <ul>
+        <li><button class="btn" onclick="checkAnswer(true)">te</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">d</button></li>
+        <li><button class="btn" onclick="checkAnswer(false)">k</button></li>
+    </ul>
+</div>
+<!-- Submit Button -->
+<div>
+    <button onclick="showFinalScore()">Показать результат(ရလဒ်ကိုပြပါ။)</button>
+<!-- Restart Button -->
+    <button class="btn" onclick="restartQuiz()">перезапускВикторина(ပြန်လည်စတင်ရန်)</button>
+
+</div>
+<div class="score-section">
+    <h3 id="score-display">Ваш результат: 0 points</h3>
+    <h3 id="badge-display"></h3>
+</div>
+
+
+
+
+<!--Audio recongnition game design-->>
+
+<div id="audio-recognition-game">    
+    <h2>Распознавание звука: русский алфавит(အသံအသိအမှတ်ပြုမှု- ရုရှားအက္ခရာ)</h2>
+    <div class="instructions-section-audio">
+        <h2>Инструкция (အကြောင်းအရာ)</h2>
+        <p>1. Нажмите на кнопку "Воспроизвести аудио", чтобы прослушать букву.(စာကိုနားဆင်ရန် "Воспроизвести аудио" ခလုတ်ကိုနှိပ်ပါ။)</p>
+        <p>2. После прослушивания выберите соответствующую букву из предложенных вариантов.(နားထောင်ပြီးနောက် ပေးထားသော ရွေးချယ်မှုများမှ သင့်လျော်သော စာကို ရွေးချယ်ပါ။)</p>
+        <p>3. Поступательно открывайте правильные буквы, чтобы заработать очки.(အမှတ်များရယူရန် မှန်ကန်သောစာလုံးများကို အဆင့်ဆင့်ဖော်ပြပါ။)</p>
+        <p>4. При ошибке будет предложено попробовать снова.(အမှားအယွင်းတစ်ခုဖြစ်ပေါ်ပါက၊ သင်ထပ်ကြိုးစားရန်သတိပေးခံရလိမ့်မည်။)</p>
+    </div>
+    <button id="play-audio-btn">Воспроизвести аудио(အသံဖွင့်ပါ။)</button>
+    <ul id="letter-options">
+        <!-- Options will be dynamically added -->
+    </ul>
+    <div id="audio-feedback"></div>
+    <div class="progress-bar">
+        <div class="progress" id="audio-progress">0%</div>
+    </div>
+    <div class="score-section" id="score-section-audio">
+        <h3 id="badge-display-audio"></h3>
+    </div>
+    <button id="restart-audio-btn" class="btn">перезапуск(ပြန်လည်စတင်ရန်)</button>
+</div>
+
+
+
+            
+    
+<!-- Memory game design -->
+<!-- Alphabet Memory Game -->
+<div id="alphabet-memory-game">
+    <!-- Game Instructions -->
+    
+
+    <!-- Title of the Game -->
+    <h1 id="game-title">Игра на запоминание алфавита</h1>
+    <div class="instructions-memory">
+        <h2>Добро пожаловать в игру «Запоминание алфавита»! Вот инструкции:</h2>
+        <p>1. Выберите карточку с буквой, чтобы начать. (только желтая карточка)</p>
+        <p>2. Сопоставьте букву с ее произношением, выбрав карточку с произношением.</p>
+        <p>3. Если вы правильно произнесете слово, вы заработаете баллы!</p>
+        <p>4.Продолжайте сопоставлять, пока не соберете все пары!</p>
+    </div>
+
+    <div id="game-board" class="game-board">
+        <!-- Letters will be added dynamically here -->
+    </div>
+
+    <div id="pronunciation-board" class="game-board">
+        <!-- Pronunciations will be added dynamically here -->
+    </div>
+
+    <div id="game-feedback"></div>
+    <div class="score-section">
+        <h3 id="score-display-memory">Points: 0</h3>
+        <h3 id="badge-display-memory">Badges Earned:</h3>
+        <!-- Badges will be appended here -->
+    </div>
+
+    <!-- Restart Button -->
+    <button id="restart-btn">Restart Game</button>
+</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
+<script src="interactive-alphabet.js"></script>
+<script src="script.js"></script>

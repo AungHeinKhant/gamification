@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Dashboard</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Module Section */
+        .module {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #f0f4fa;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .module h2 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 25px;
+            margin: 15px 0;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50, #66bb6a);
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
+        /* Activities Section */
+        .activities {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .activity {
+            flex: 1;
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .activity h3 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .activity p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .badge {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ffd700, #f4c430);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Language Learning Dashboard</h1>
+
+        <!-- Alphabet Module -->
+        <div class="module">
+            <h2>Alphabet Module</h2>
+            <div class="progress-bar">
+                <span style="width: 70%;">Progress: 70%</span>
+            </div>
+            <div class="activities">
+                <div class="activity">
+                    <h3>Audio Games</h3>
+                    <p>Learn letter sounds interactively.</p>
+                </div>
+                <div class="activity">
+                    <h3>Memory Cards</h3>
+                    <p>Match letters with pronunciations.</p>
+                </div>
+            </div>
+            <div class="achievements">
+                <div class="badge">Alphabet Master</div>
+                <div class="badge">50% Complete</div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Module -->
+        <div class="module">
+            <h2>Vocabulary Module</h2>
+            <div class="progress-bar">
+                <span style="width: 60%;">Progress: 60%</span>
+            </div>
+            <div class="activities">
+                <div class="activity">
+                    <h3>Flashcards</h3>
+                    <p>Review and memorize key words.</p>
+                </div>
+                <div class="activity">
+                    <h3>Quizzes</h3>
+                    <p>Test your word knowledge.</p>
+                </div>
+            </div>
+            <div class="achievements">
+                <div class="badge">Word Wizard</div>
+                <div class="badge">300 Words</div>
+            </div>
+        </div>
+
+        <!-- Grammar Module -->
+        <div class="module">
+            <h2>Grammar Module</h2>
+            <div class="progress-bar">
+                <span style="width: 85%;">Progress: 85%</span>
+            </div>
+            <div class="activities">
+                <div class="activity">
+                    <h3>Drag-and-Drop</h3>
+                    <p>Construct sentences interactively.</p>
+                </div>
+                <div class="activity">
+                    <h3>Case-Based Flashcards</h3>
+                    <p>Master Russian grammar rules.</p>
+                </div>
+            </div>
+            <div class="achievements">
+                <div class="badge">Grammar Guru</div>
+                <div class="badge">Mastered Cases</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

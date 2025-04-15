@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы русского языка - Игровые</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/learn russian logo.jpg" alt="Логотип">
+        <div class="Navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="course.html">Курсы</a></li>
+                <li><a href="dashboard.html">Панель управления</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gamified Courses Section -->
+    <section id="gamified-courses" class="courses-section">
+        <div class="container">
+            <h1>Игровые курсы русского языка</h1>
+            <p>Учите русский язык, развлекаясь! Открывайте уровни, зарабатывайте значки и отслеживайте свой прогресс.</p>
+
+            <div class="course-grid">
+                <!-- Alphabet Course -->
+                <div class="course-card">
+                    <h3>Алфавит</h3>
+                    <p>Осваивайте русский алфавит шаг за шагом</p>
+                    <button class="btn" onclick="window.location.href='alphabet-course.html';">Начать курс</button>
+                </div>
+
+                <!-- Vocabulary Course -->
+                <div class="course-card">
+                    <h3>Словарный запас</h3>
+                    <p>Выучите основные слова и фразы для повседневного общения.</p>
+                    <button class="btn" onclick="window.location.href='vocabulary-course.html';">Начать курс</button>
+                </div>
+
+                <!-- Grammar Course -->
+                <div class="course-card">
+                    <h3>Грамматика</h3>
+                    <p>Понимать русскую грамматику на практических примерах.</p>
+                    <button class="btn" onclick="window.location.href='grammar-course.html';">Начать курс</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="scripts.js"></script>
